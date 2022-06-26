@@ -1,0 +1,21 @@
+create database empapp;
+use empapp;
+CREATE table Employee(
+  EmployeeId int primary key auto_increment,
+  EmployeeName Varchar(50),
+  Address varchar(100),
+  Designation Varchar(30),
+  ContactNumber bigint,
+  Email varchar(50),
+  AnnualCTC Double,
+  YearsofExperience int,
+  BloodGroup Varchar(3),
+  check(BloodGroup in ('A+','B+','A-','AB+','B-','AB-','O+','O-')));
+  
+  select * from Employee
+  
+insert into Employee (EmployeeName,Address,Designation,ContactNumber,Email,AnnualCTC,YearsofExperience,BloodGroup) values ("Lija","Bangalore","CTO",8763098125,"Lija@gmail.com",20,10,"B+");
+
+  insert into Employee (EmployeeName,Address,Designation,ContactNumber,Email,AnnualCTC,YearsofExperience,BloodGroup) values("Gita","Mumbai","Assistant Engineer",9740934709,"gita@gmail.com",20,10,"B+");
+  insert into Employee (EmployeeName,Address,Designation,ContactNumber,Email,AnnualCTC,YearsofExperience,BloodGroup) values("Sumi","Manipur","Assistant Engineer",9832097145,"sumi@gmail.com",12,14,"o+");
+  insert into Employee (EmployeeName,Address,Designation,ContactNumber,Email,AnnualCTC,YearsofExperience,BloodGroup) values("Anu","Kerala","Software Engineer",9832309715,"anu@gmail.com",7,8,"B-");
